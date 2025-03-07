@@ -1,0 +1,16 @@
+.mainClass{
+    text-align: center;
+
+}
+div{
+    height: 66vh;
+    width: 66vw; 
+    background-color: #FBBE00;
+}
+form{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 75px 25px 75px 25px;
+}
