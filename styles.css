@@ -1,0 +1,252 @@
+:root {
+    --primary-color: #FBBE00;
+    --secondary-color: #000000;
+    --accent-color: #333333;
+    --light-gray: #f1f1f1;
+    --medium-gray: #ccc;
+    --white: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+
+header {
+    background: linear-gradient(to right, var(--primary-color), #FFD443);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h1 {
+    color: var(--secondary-color);
+    padding: 20px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+ul.nav {
+    list-style-type: none;
+    display: flex;
+}
+
+ul.nav li {
+    margin-left: 10px;
+}
+
+ul.nav li a {
+    display: block;
+    color: var(--secondary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: all var(--transition-speed);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+}
+
+ul.nav li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--light-gray);
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.hero-image:hover img {
+    transform: scale(1.03);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed);
+}
+
+h2:hover::after {
+    width: 120px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul:not(.nav) {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul:not(.nav) li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+
+ul:not(.nav) li::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+form {
+    margin-top: 30px;
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(251, 190, 0, 0.25);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-speed);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #e5ab00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--light-gray);
+    margin: 30px 0 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    ul.nav {
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    ul.nav li {
+        margin: 0 5px;
+    }
+    
+    ul.nav li a {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .content {
+        padding: 40px;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+}
