@@ -1,16 +1,30 @@
 .mainClass{
     text-align: center;
-
+    background-color: #FBBE00;
+    
 }
 div{
-    height: 66vh;
-    width: 66vw; 
-    background-color: #FBBE00;
+    height: 75vh;
+    width: 75vw; 
+    /* background-color: #FBBE00; */
+    justify-content: center;
+
 }
 form{
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin: 75px 25px 75px 25px;
+    margin: 125px 85px 125px 85px;
+    box-shadow: inset;
+
+    /* background-color: #FBBE00; */
 }
+label {
+    margin-bottom: 2rem;
+}
+
+#button {
+margin-top: 1rem;
+}
+
