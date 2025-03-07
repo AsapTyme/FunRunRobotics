@@ -4,7 +4,7 @@
     --secondary-color: #000000;
     --secondary-light: rgba(0, 0, 0, 0.7);
     --white: #ffffff;
-    --white-transparent: rgba(255, 255, 255, 0.8);
+    --white-transparent: rgba(255, 255, 255, 0.9);
     --gray-100: #f8f9fa;
     --gray-200: #e9ecef;
     --gray-300: #dee2e6;
@@ -42,7 +42,7 @@ header {
     align-items: center;
     padding: 0 5%;
     height: 5rem;
-    background: #fbbc00ba;
+    background: #fbbc00d2;
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-bottom: var(--glass-border);
